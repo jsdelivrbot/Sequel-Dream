@@ -1,0 +1,213 @@
+body{
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  cursor:url('/assets/images/cursor.png'), auto;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+#inserted {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 41.4%;
+  letter-spacing: 15px;
+  margin-top: 500px;
+  font-size: 100px;
+  font-family: 'Dorsa', sans-serif;
+  opacity: 0;
+  background-color: transparent;
+  transition: all 1s ease;
+  color: black;
+}
+.separators {
+  margin-bottom: 10px;
+  transition: all 1s ease;
+}
+
+.all-dreams, #id {
+  margin-bottom: 10px;
+  /*opacity: 0;*/
+  transition: all 1s ease;
+}
+
+.devour-button {
+  background-color: rgba(190, 190, 190, 0);
+  border: none;
+  color: white;
+  margin-bottom: 30px;
+  border-radius: 15%;
+  font-family: 'Dorsa', sans-serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  position: relative;
+  z-index: 7;
+  transition: all 1s ease;
+}
+
+.devour-form {
+  overflow: hidden;
+}
+
+button:hover {
+  cursor:url('/assets/images/pointer.png'), auto;
+}
+
+.devour-button:hover {
+  cursor:url('/assets/images/pointer.png'), auto;
+}
+
+.dream-contain {
+  margin-top: 25px;
+  font-family: 'Bungee Hairline', cursive;
+  font-size: 15px;
+}
+.dream-contain2 {
+  margin-top: 25px;
+  font-family: 'Bungee Hairline', cursive;
+  font-size: 15px;
+}
+
+#added-dreams{
+  float: left;
+  margin-left: 38%;
+}
+
+#create-form {
+  position: absolute;
+  top: 0;
+  margin-top: 290px;
+  width: 100%;
+}
+
+#dream-form {
+  width: 100%;
+}
+
+#devoured-dreams{
+  float: left;
+}
+
+#form-container {
+  width: 100%;
+}
+
+#left-trigger {
+  position: absolute;
+  left: 0;
+  width: 175px;
+  height: 100%;
+  background-color: transparent;
+  opacity: 0;
+  z-index: 1;
+}
+
+#left-box {
+  position: absolute;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  background-color: transparent;
+  opacity: 0;
+  transition: all 1s ease;
+  color: white;
+  z-index: 2;
+  overflow: auto;
+}
+
+#right-trigger {
+  position: absolute;
+  right: 0;
+  width: 175px;
+  height: 100%;
+  background-color: transparent;
+  opacity: 0;
+  z-index: 1;
+}
+
+#right-box {
+  position: absolute;
+  right: 0;
+  width: 0px;
+  height: 100%;
+  background-color: transparent;
+  opacity: 0;
+  transition: all 1s ease;
+  color: white;
+  z-index: 2;
+}
+
+#insertion-text {
+  color: #444;
+  background-color: transparent;
+  opacity: 1;
+  border: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: 10%;
+  width: 80%;
+  margin-bottom: 6px;
+  font-family: 'Rokkitt', serif;
+  font-size: 15px;
+}
+
+#top-glow{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  opacity: 0;
+  box-shadow: 0px 20px 400px 190px #111;
+}
+
+#submit-dream {
+  color: #444;
+  background-color: white;
+  opacity: 0;
+  border: 1px solid #FFF;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: 10%;
+  width: 80%;
+  margin-bottom: 5px;
+  box-shadow: 0px -20px 400px 290px white;
+  z-index: 5;
+  font-family: 'Rokkitt', serif;
+  font-size: 15px;
+}
+
+#dream-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 80%;
+  height: 80px;
+  color: black;
+  font-family: 'Rokkitt', serif;
+  letter-spacing: 1.65px;
+  font-size: 14px;
+  z-index: 4;
+  display:inline-block;
+  text-align: center;
+}
+
+input:hover {
+  cursor:url('/assets/images/cursor.png'), auto;
+}
+
+textarea:focus, input:focus, button:focus{
+  outline: none;
+}
+::-webkit-input-placeholder {
+ text-align: center;
+ font-size: 14px;
+ color: #555;
+ opacity: 1;
+ font-family: 'Rokkitt', serif;
+ letter-spacing: 1.65px;
+ line-height: 25px;
+}
