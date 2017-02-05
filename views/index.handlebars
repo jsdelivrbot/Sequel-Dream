@@ -1,35 +1,49 @@
 <div id="top-glow"></div>
 <div id="inserted">Inserted</div>
-<div id="left-box">
-  {{#each dreams}}
-    <div class="dream-contain">
-      <p class="all-dreams">
-        {{this.dream_name}}</p>
-      <p class="separators">|</p>
-      <form action="/{{this.id}}" method="POST" class="devour-form">
-        <input type="hidden" name="devour" value="{{this.id}}">
-        <button type="submit" data-id="{{this.id}}" class="devour-button">DEVOUR</button>
-      </form>
+<div id="selected-dream"></div>
+<div id="users-box">
+    <div id="users-contain">
+        <p id="user-header">ORIGINS</p>
+        {{#each users}}
+            <div class="users">
+                <p id="{{this.dream_user_name}}">{{this.dream_user_name}}</p>
+            </div>
+        {{/each}}
     </div>
-  {{/each}}
+</div>
+<div id="left-box">
+    {{#each dreams}}
+        <div class="dream-contain" id="{{this.id}}">
+            <p class="all-dreams">
+                {{this.dream_name}}</p>
+            <p class="separators">|</p>
+            <form action="/{{this.id}}" method="POST" class="devour-form">
+                <input type="hidden" name="devour" value="{{this.id}}">
+                <button type="submit" data-id="{{this.id}}" class="devour-button">DEVOUR</button>
+            </form>
+        </div>
+    {{/each}}
 </div>
 <div id="left-trigger"></div>
 <div id="right-box">
-  {{#each devoured}}
-    <div class="dream-contain2">
-      <p>
-        {{this.dream_name}}</p>
-    </div>
-  {{/each}}
+    {{#each devoured}}
+        <div class="dream-contain2" id="{{this.id}}">
+            <p>
+                {{this.dream_name}}</p>
+        </div>
+    {{/each}}
 </div>
-<div id="right-trigger"></div>
+<!-- <div id="right-trigger"></div> -->
 <div id="form-container">
-  <form id="create-form" action="/" method="POST">
-    <div class="dream-form">
-      <input id="dream-input" name="dream" rows="8" cols="40" placeholder="Tell Me Your Dreams" autofocus autocomplete="off">
-    </div>
+    <form id="create-form" action="/" method="POST">
+        <div class="dream-form">
+            <input id="dream-input" name="dream" rows="8" cols="40" placeholder="Tell Me Your Dreams" autofocus autocomplete="off">
+        </div>
+        <div class="dream-form">
+            <input id="dream-input-user" name="dreamUser" rows="8" cols="40" placeholder="Who owns this dream?" autofocus autocomplete="off">
+        </div>
 
-    <button id="submit-dream" type="submit">Insertion</button>
-    <div id="insertion-text">Insertion</div>
-  </form>
+        <button id="submit-dream" type="submit"></button>
+        <!-- <div id="insertion-text">Insertion</div> -->
+    </form>
 </div>

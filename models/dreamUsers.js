@@ -5,40 +5,35 @@
 // var Sequelize = require("sequelize");
 // sequelize (lowercase) references my connection to the DB.
 // var sequelize = require("../config/connection.js");
+// const Dream = require("./dream.js");
 
 module.exports = function(sequelize, DataTypes) {
     // Creates a "Dream" model that matches up with DB
-    let Dream = sequelize.define("Dream", {
+    let DreamUser = sequelize.define("DreamUser", {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
-            primaryKey: true,
-            foreignKey: true
+            primaryKey: true
         },
-        dream_name: {
+        dream_user_name: {
             type: DataTypes.STRING
         },
-        devoured: {
-            type: DataTypes.BOOLEAN
+        dream_owned: {
+            type: DataTypes.STRING
         },
         date: {
             type: DataTypes.DATE
-        },
-        foreign_user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "DreamUser",
-                key: "id"
-            }
         }
     }, {
         timestamps: false
     });
 
-    // Syncs with DB
-    Dream.sync();
+    // DreamUser.hasOne(Dream);
 
-    return Dream;
+    // Syncs with DB
+    DreamUser.sync();
+
+    return DreamUser;
 
     // Makes the Dream Model available for other files (will also create a table)
 }
